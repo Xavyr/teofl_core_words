@@ -1,6 +1,12 @@
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 require "tilt/erubis"
+
+
+
+#add quote array for each page, break views into layut and yeilds, 
+#talk to steven. 
+#deploy
 
 before do 
   @all_text = File.read("data/all_words.txt").downcase!
